@@ -10,6 +10,7 @@ public class main {
 		File obj=new File("vocabulary.txt");
 		Vocabulary v=new Vocabulary();
 		BinaryTree b=new BinaryTree();
+		input1 i1=new input1();
 		
 		//v.start();
 		v.run();
@@ -24,8 +25,9 @@ public class main {
 		int choice;
 		String query;
 		
-		
-		System.out.println("Select from the following options:");
+		do {
+			
+		System.out.println("\n\nSelect from the following options:");
 		System.out.println("Press 1. Display BST build from Vocabulary File.");
 		System.out.println("Press 2. Display Vectors build from Input files.");
 		System.out.println("Press 3. View Match words and its frequency.");
@@ -33,28 +35,35 @@ public class main {
 		System.out.println("Press 5. Exit.");
 		choice=user_input.nextInt();
 		
+		
 		switch(choice) {
 		case 1:{
 			System.out.println("\n.......................................................");
 			System.out.println("Displaying BST from Vocabulary file");
 			b.traverseInOrder(b.root);
+			v.run();
 		}break;
 		
 		case 2:{
 			System.out.println("\n.......................................................");
-			System.out.println("Displaying Vector from input file");
-			
+			System.out.println("Displaying Vector from input files");
+			i1.run();
+			i1.displayVector();
 			
 		}break;
 		case 3:{
 
 			System.out.println("\n.......................................................");
-			System.out.println("Displaying mathed words and their frequency");
+			System.out.println("Displaying matched words and their frequency");
 		}break;
 		
 		case 4:{
-			System.out.println("Enter yout query to be searched.");
-			query=user_input.nextLine();			
+			System.out.println("Enter your query to be searched.");
+			query=user_input.next();
+			
+			
+			i1.searching(query);
+			
 		}break;
 		
 		case 5:{
@@ -67,8 +76,7 @@ public class main {
 		
 		}
 		
-		
-
+		}while(choice!=5);
 	}
 
 }

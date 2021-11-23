@@ -73,6 +73,8 @@ public class BinaryTree {
 	        	System.out.println("NULL");
 	     }
 	
-	
+	public Node getValue() {
+		return root.left;
+	}
 	
 }
