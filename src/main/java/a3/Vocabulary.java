@@ -27,8 +27,8 @@ public class Vocabulary extends Thread {
 					
 					String data=reader.next();
 					words=data.split(",");
-					
-				for(int i=0;i<=7;i++){//(words[i]!="\0");i++) {
+					int size=words.length;
+				for(int i=0;i<=size-1;i++){//(words[i]!="\0");i++) {
 					
 						String value=words[i];
 							

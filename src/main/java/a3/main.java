@@ -9,12 +9,17 @@ public class main {
 		
 		File obj=new File("vocabulary.txt");
 		Vocabulary v=new Vocabulary();
+		BinaryTree b=new BinaryTree();
+		
 		//v.start();
 		v.run();
+		
+		b.traverseInOrder(b.root);
+		System.out.println(b.root);
 		//System.out.println("Reading");
 		
 		//Node root=new Node();
-		/*
+		
 		Scanner user_input=new Scanner(System.in);
 		int choice;
 		String query;
@@ -32,7 +37,7 @@ public class main {
 		case 1:{
 			System.out.println("\n.......................................................");
 			System.out.println("Displaying BST from Vocabulary file");
-			v.traverseInOrder(root);
+			b.traverseInOrder(b.root);
 		}break;
 		
 		case 2:{
@@ -62,7 +67,7 @@ public class main {
 		
 		}
 		
-		*/
+		
 
 	}
 
